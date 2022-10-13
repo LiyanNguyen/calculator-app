@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root {
+	/* THEME 1 */
+	/* Backgrounds */
+	--mainBackground: hsl(222, 26%, 31%);
+	--keypadBackground: hsl(223, 31%, 20%);
+	--screenBackground: hsl(224, 36%, 15%);
+
+	/* Keypads */
+	--key1Hover: hsl(225, 41%, 69%);
+	--key1: hsl(225, 21%, 49%);
+	--key1Shadow: hsl(224, 28%, 35%);
+
+	--key2Hover: hsl(6, 83%, 70%);
+	--key2: hsl(6, 63%, 50%);
+	--key2Shadow: hsl(6, 70%, 34%);
+
+	--key3Hover: hsl(30, 100%, 100%);
+	--key3: hsl(30, 25%, 89%);
+	--key3Shadow: hsl(28, 16%, 65%);
+
+	/* Text */
+	--keyText: hsl(221, 14%, 31%);
+	--screenText: hsl(0, 0%, 100%);
+
+	font-family: 'League Spartan', sans-serif;
+	font-weight: 700;
+	font-size: 32px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* MOBILE FIRST APPROACH */
+body {
+	background-color: var(--mainBackground);
+	height: 100vh;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	color: var(--screenText);
+}
+
+.toggleContainer {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	font-size: .35rem;
+}
+
+.toggler {
+	position: relative;
+	width: 2.5rem;
+	height: .75rem;
+	border-radius: .5rem;
+	background-color: var(--keypadBackground);
+}
+
+.themeNumbers {
+	position: absolute;
+	top: -.5rem;
+	display: flex;
+	gap: .75rem;
+	padding-inline: .25rem;
+}
+
+.circle {
+	position: absolute;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: var(--key2);
+	top: .1rem;
+	left: .15rem;
+}
+
+.screen {
+	position: relative;
+	width: 100%;
+	height: 2.5rem;
+	background-color: var(--screenBackground);
+	border-radius: .25rem;
+	padding: .5rem ;
+	color: var(--screenText);
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.keypadContainer {
+	width: 100%;
+	background-color: var(--keypadBackground);
+	border-radius: .25rem;
+	padding: .5rem;
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	gap: .5rem;
+}
+
+
+.key {
+	width: 1.75rem;
+	height: 1.75rem;
+	background-color: var(--key3);
+	color: var(--keyText);
+	padding: .5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: .25rem;
+	cursor: pointer;
+	box-shadow: 0rem .15rem 0 0 var(--key3Shadow);
+	transition: .15s ease;
+
+	/* prevent keys from getting highlited */
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.key:hover {
+	background-color: var(--key3Hover);
+}
+
+.key.big {
+	width: 4.1rem;
+}
+
+.key.letter {
+	font-size: .5rem;
+	background-color: var(--key1);
+	color: var(--screenText);
+	box-shadow: 0rem .15rem 0 0 var(--key1Shadow);
+}
+
+.key.letter:hover {
+	background-color: var(--key1Hover);
+}
+
+.key.red {
+	background-color: var(--key2);
+	color: var(--screenText);
+	box-shadow: 0rem .15rem 0 0 var(--key2Shadow);
+}
+
+.key.red:hover {
+	background-color: var(--key2Hover);
+}
+
+
+/* TABLET AND DESKTOP */
+@media screen and (min-width: 768px) {
+	.keypadContainer {
+		padding: 1rem;
+	}
+
+	.key {
+		width: 2.75rem;
+	}
+
+	.key.big {
+		width: 6.2rem;
+	}
+
+	.key.letter {
+		font-size: .75rem;
+	}
+
+	.screen {
+		padding-inline: 1rem;
+	}
+}
