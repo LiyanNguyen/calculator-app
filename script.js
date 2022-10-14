@@ -1,5 +1,7 @@
 let numberKeys = document.querySelectorAll(".key.number");
 let decimalKey = document.querySelector(".key.decimal");
+let deleteKey = document.querySelector(".key.delete");
+let resetKey = document.querySelector(".key.reset");
 let display = document.querySelector("#display");
 let currentNumber = ""
 let hasDecimalPoint = false;
@@ -18,9 +20,17 @@ decimalKey.onclick = () => {
 	if (currentNumber != "" && hasDecimalPoint == false) {
 		hasDecimalPoint = true;
 		currentNumber += "."
-    display.innerText = currentNumber;
+		display.innerText = currentNumber;
+
   }
 }
 
-// CONTINUE LATER, ADD THE OTHER BUTTON FUNCTIONS
-	 
+deleteKey.onclick = () => {
+	currentNumber = currentNumber.slice(0, -1);
+	display.innerText = currentNumber;
+}
+
+resetKey.onclick = () => {
+	currentNumber = "";
+	display.innerText = currentNumber;
+}
