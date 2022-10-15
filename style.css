@@ -43,6 +43,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: .5s ease;
 }
 
 main {
@@ -70,6 +71,7 @@ main {
 	height: .75rem;
 	border-radius: .5rem;
 	background-color: var(--keypadBackground);
+	cursor: pointer;
 }
 
 .themeNumbers {
@@ -78,6 +80,7 @@ main {
 	display: flex;
 	gap: .75rem;
 	padding-inline: .25rem;
+	cursor: default;
 }
 
 .circle {
@@ -88,6 +91,7 @@ main {
 	background-color: var(--key2);
 	top: .1rem;
 	left: .15rem;
+	transition: .5s ease;
 }
 
 .screen {
@@ -100,6 +104,8 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	font-size: 1.5rem;
+	transition: .5s ease;
 }
 
 #currentOperation {
@@ -107,6 +113,8 @@ main {
 	top: .25rem;
 	left: .25rem;
 	font-size: .5rem;
+	color: var(--screenText);
+	transition: .5s ease;
 }
 
 .keypadContainer {
@@ -117,6 +125,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: .5rem;
+	transition: .5s ease;
 }
 
 .row {
@@ -137,7 +146,8 @@ main {
 	border-radius: .25rem;
 	cursor: pointer;
 	box-shadow: 0rem .15rem 0 0 var(--key3Shadow);
-	transition: .15s ease;
+	/* transition: .15s ease; */
+	transition: .5s ease;
 
 	/* prevent keys from getting highlited */
 	-webkit-user-select: none;
@@ -196,4 +206,78 @@ main {
 	.screen {
 		padding-inline: 1rem;
 	}
+}
+
+.theme2 {
+	/* THEME 2 */
+	/* Backgrounds */
+	--mainBackground: hsl(0, 0%, 90%);
+	--keypadBackground: hsl(0, 5%, 81%);
+	--screenBackground: hsl(0, 0%, 93%);
+
+	/* Keypads */
+	--key1Hover: hsl(185, 52%, 47%);
+	--key1: hsl(185, 42%, 37%);
+	--key1Shadow: hsl(185, 58%, 25%);
+
+	--key2Hover: hsl(25, 100%, 60%);
+	--key2: hsl(25, 98%, 40%);
+	--key2Shadow: hsl(25, 99%, 27%);
+
+	--key3Hover: hsl(30, 100%, 100%);
+	--key3: hsl(45, 7%, 89%);
+	--key3Shadow: hsl(35, 11%, 61%);
+
+	/* Text */
+	--keyText: hsl(60, 10%, 19%);
+	--screenText: hsl(0, 0%, 100%);
+}
+
+.theme2 #display,
+.theme2 #currentOperation,
+.theme2 .toggleContainer,
+.theme2 .top>p {
+	color: var(--keyText);
+}
+
+.theme2 .circle {
+	transform: translateX(.8rem);
+}
+
+.theme3 {
+	/* THEME 3 */
+	/* Backgrounds */
+	--mainBackground: hsl(268, 75%, 9%);
+	--keypadBackground: hsl(268, 71%, 12%);
+	--screenBackground: hsl(268, 71%, 12%);
+
+	/* Keypads */
+	--key1Hover: hsl(281, 100%, 36%);
+	--key1: hsl(281, 89%, 26%);
+	--key1Shadow: hsl(285, 91%, 52%);
+
+	--key2Hover: hsl(176, 100%, 64%);
+	--key2: hsl(176, 100%, 44%);
+	--key2Shadow: hsl(177, 92%, 70%);
+
+	--key3Hover: hsl(268, 67%, 41%);
+	--key3: hsl(268, 47%, 21%);
+	--key3Shadow: hsl(290, 70%, 36%);
+
+	/* Text */
+	--keyText: hsl(52, 100%, 62%);
+	--screenText: hsl(52, 100%, 62%);
+	--white: hsl(0, 0%, 100%);
+}
+
+.theme3 .letter {
+	color: var(--white)
+}
+
+.theme3 .equal {
+	color: var(--key3);
+}
+
+.theme3 .circle {
+	transform: translateX(1.7rem);
 }

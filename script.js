@@ -115,3 +115,26 @@ equalKey.onclick = () => {
 		displayResult();
 	}
 }
+
+let themeToggler = document.querySelector(".toggler");
+let rootElement = document.querySelector(":root");
+let currentTheme = 0
+
+themeToggler.onclick = () => {
+	currentTheme++
+	
+	if (currentTheme == 1) {
+		rootElement.classList.add("theme2");
+	}
+
+	else if (currentTheme == 2) {
+		rootElement.classList.remove("theme2");
+    rootElement.classList.add("theme3");
+	}
+	
+	else if (currentTheme == 3) {
+		rootElement.classList.remove("theme2");
+		rootElement.classList.remove("theme3");
+		currentTheme = 0;
+  }
+}
