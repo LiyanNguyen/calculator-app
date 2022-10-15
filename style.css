@@ -108,6 +108,10 @@ main {
 	transition: .5s ease;
 }
 
+.screen h1 {
+	font-size: inherit;
+}
+
 #currentOperation {
 	position: absolute;
 	top: .25rem;
