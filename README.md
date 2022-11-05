@@ -1,5 +1,11 @@
 # Calculator App
  A simple calculator webApp with theme switcher
+ 
+ ---
+## **⚠️ Update 5/11/2022**
+- This project has been updated to use TypeScript
+---
+
 
 ### Frontend Mentor - Calculator App
 This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29).
@@ -16,21 +22,22 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 - Live Site URL: https://liyannguyen.github.io/calculator-app
 
 ### My Process
-- Design the Mobile viewport WHILE desinging the Desktop Viewport at the same time using
+- Design the Mobile viewport WHILE desinging the Desktop Viewport at the same time
 - Design the flex/grid system, making sure to have both Desktop and Mobile Viewport layout correct
 - Add in all the other HTML content
 - Finished up all the CSS designs
+- Add in the JavaScript logic
+- Upgrage to TypeScript
 
 ### Built with
 - Semantic HTML5 markup
 - CSS custom properties
+- TypeScript
 - Flexbox
-- Grid
 - Mobile-first workflow
 
 ### What I Learned
-- More Flexbox
-- More JavaScript
+- Reviewed TypeScript
 - Theme Switcher using classes on the root file of the CSS
 - Probably better to specify the widht and height of the small UI elements first rather than the big ones
 - The containers of UI element should just be paddings - their width and height is defined by the smaller elements inside as flex items
