@@ -41,3 +41,5 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 - Twitter - [@LiyanAnajao](https://twitter.com/LiyanAnajao)
 
 ### Acknowledgments
+JavaScript Minifier:
+https://www.toptal.com/developers/javascript-minifier
