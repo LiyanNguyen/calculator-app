@@ -2,8 +2,11 @@
  A simple calculator webApp with theme switcher
  
  ---
-## **⚠️ Update 5/11/2022**
-- This project has been updated to use TypeScript
+## **⚠️ Updates**
+### **5/11/2022**
+- This project has been updated to use **TypeScript**
+### **17/11/2022**
+- This project has been updated to use **LESS** Preprocessor
 ---
 
 
